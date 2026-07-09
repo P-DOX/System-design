@@ -22,13 +22,13 @@ class Brightness {
         }
 };
 
-class HomeTheatre {
+class HomeTheatreFacade {
     TV* tv_;
     Sound* sound_;
     Brightness* brightness_;
 
     public:
-        HomeTheatre() {
+        HomeTheatreFacade() {
             tv_ = new TV();
             sound_ = new Sound();
             brightness_ = new Brightness();
@@ -48,7 +48,7 @@ class HomeTheatre {
 };
 
 int main() {
-    HomeTheatre* ht = new HomeTheatre();
+    HomeTheatreFacade* ht = new HomeTheatreFacade();
     ht->Start();
     ht->Stop();
 }
